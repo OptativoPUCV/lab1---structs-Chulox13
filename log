@@ -65,3 +65,13 @@ Wed 13 Mar 2024 09:09:50 PM UTC:
  tests:  0|6
 total_score: 10/70
 517cdcc
+Wed 13 Mar 2024 09:13:46 PM UTC: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:31:7: error: array size missing in ‘arr2’
+   31 |   int arr2[];
+      |       ^~~~
+Compilation failed
+2829f60
