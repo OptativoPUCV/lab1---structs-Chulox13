@@ -306,3 +306,17 @@ test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 cc7139d
+Sat 16 Mar 2024 11:15:00 PM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:59:5: error: expected expression before ‘}’ token
+   59 |     }
+      |     ^
+exercises.c:60:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
+   60 |   int newArr[cont];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4779c5e
