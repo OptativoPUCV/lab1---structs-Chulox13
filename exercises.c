@@ -37,9 +37,9 @@ void reverseArray(int arr[], int size)
     // A números en x le asignamos lo que haya en la
     // otra mitad, restando 1 porque recuerda que los índices
     // comienzan en 0
-    arr[x] = arr[size - x - 1];
+    arr[x] = arr[size - 1];
     // Y a números en longitud - x - 1 le ponemos el temporal
-    arr[size - x - 1] = temporal;
+    arr[size - 1] = temporal;
   }
 
 }
