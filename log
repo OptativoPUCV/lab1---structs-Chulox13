@@ -133,3 +133,29 @@ exercises.c:56:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 dceb6b1
+Sat 16 Mar 2024 11:00:48 PM UTC: 
+ exercises.c | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:32:13: error: ‘tamano’ undeclared (first use in this function)
+   32 |   int fin = tamano - 1;
+      |             ^~~~~~
+exercises.c:32:13: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:37:14: error: ‘arreglo’ undeclared (first use in this function)
+   37 |       temp = arreglo[i];
+      |              ^~~~~~~
+exercises.c:41:12: error: expected ‘;’ before ‘:’ token
+   41 |       fin--:
+      |            ^
+      |            ;
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:59:5: error: expected expression before ‘}’ token
+   59 |     }
+      |     ^
+exercises.c:60:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
+   60 |   int newArr[cont];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e90c2c7
