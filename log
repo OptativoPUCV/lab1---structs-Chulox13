@@ -376,3 +376,30 @@ exercises.c:57:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 7855891
+Sat 16 Mar 2024 11:48:16 PM UTC: 
+ exercises.c | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:34:19: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                   ^
+exercises.c:34:21: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                     ^
+exercises.c:34:24: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                        ^
+exercises.c:34:26: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                          ^
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:50:5: error: expected expression before ‘}’ token
+   50 |     }
+      |     ^
+exercises.c:51:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
+   51 |   int newArr[cont];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0db9f49
