@@ -430,3 +430,33 @@ exercises.c:53:11: error: assignment to ‘int *’ from ‘int’ makes pointer
 cc1: all warnings being treated as errors
 Compilation failed
 a8dbd43
+Sat 16 Mar 2024 11:59:55 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:34:19: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                   ^
+exercises.c:34:21: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                     ^
+exercises.c:34:24: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                        ^
+exercises.c:34:26: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                          ^
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:50:5: error: expected expression before ‘}’ token
+   50 |     }
+      |     ^
+exercises.c:53:11: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   53 |   newSize = cont;
+      |           ^
+exercises.c:67:10: error: function returns address of local variable [-Werror=return-local-addr]
+   67 |   return newArr;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b651c92
