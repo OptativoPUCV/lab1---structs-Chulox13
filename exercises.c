@@ -28,16 +28,16 @@ invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) 
 {
-  int aux[size];
-  for (int i = 0; i < size; i++) 
-  {
-      aux[size - 1 - i] = arr[i];
-  }
-  
-  for (int i = 0; i < size; i++) 
-  {
-      arr[i] = aux[i];
-  }
+  int temporal;
+  for (int x = 0; x < size / 2; x++) {
+    // Guardamos el valor de números en x
+    temporal = arr[x];
+    // A números en x le asignamos lo que haya en la
+    // otra mitad, restando 1 porque recuerda que los índices
+    // comienzan en 0
+    arr[x] = arr[size - x - 1];
+    // Y a números en longitud - x - 1 le ponemos el temporal
+    arr[size - x - 1] = temporal;
 
   
 }
