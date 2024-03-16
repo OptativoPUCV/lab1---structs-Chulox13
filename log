@@ -98,3 +98,38 @@ exercises.c:31:7: error: variable ‘arr2’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 66e2864
+Wed 13 Mar 2024 09:21:49 PM UTC: 
+ exercises.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:31:7: error: unused variable ‘arr2’ [-Werror=unused-variable]
+   31 |   int arr2[size-1];
+      |       ^~~~
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:55:5: error: expected expression before ‘}’ token
+   55 |     }
+      |     ^
+exercises.c:56:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
+   56 |   int newArr[cont];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+Sat 16 Mar 2024 10:55:52 PM UTC: 
+ exercises.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:31:7: error: unused variable ‘arr2’ [-Werror=unused-variable]
+   31 |   int arr2[size-1];
+      |       ^~~~
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:55:5: error: expected expression before ‘}’ token
+   55 |     }
+      |     ^
+exercises.c:56:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
+   56 |   int newArr[cont];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+dceb6b1
