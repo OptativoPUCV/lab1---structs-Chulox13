@@ -229,3 +229,21 @@ exercises.c:57:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 57c9623
+Sat 16 Mar 2024 11:05:49 PM UTC: 
+ exercises.c | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:31:7: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   31 |   int aux[size];
+      |       ^~~
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:53:5: error: expected expression before ‘}’ token
+   53 |     }
+      |     ^
+exercises.c:54:7: error: unused variable ‘newArr’ [-Werror=unused-variable]
+   54 |   int newArr[cont];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+dc1d766
