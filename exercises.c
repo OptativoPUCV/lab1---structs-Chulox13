@@ -98,20 +98,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       indice_fusionado++;
   }
 
-  // Agregar los elementos restantes del arreglo1, si los hay
-  while (indice1 < size1) {
-      result[indice_fusionado] = arr1[indice1];
-      indice1++;
-      indice_fusionado++;
-  }
-
-  // Agregar los elementos restantes del arreglo2, si los hay
-  while (indice2 < size2)
-    {
-      result[indice_fusionado] = arr2[indice2];
-      indice2++;
-      indice_fusionado++;
-    }
+  
   
   
   
