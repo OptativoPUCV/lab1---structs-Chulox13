@@ -129,16 +129,13 @@ int checkSorted(int arr[], int size)
       {
         
       }
-      else
-      {
-        variable = -1;
-        break;
-      }
+      else break;
     }
   if (variable == 1) 
   {
     return variable;
   }
+  variable = -1;
   for (int k = 0; k < size; k++)
     {
       if (arr[k] >= arr[k+1])
@@ -148,7 +145,7 @@ int checkSorted(int arr[], int size)
         
       else
       {
-        variable = 0;
+        break;
       }
     }
   if (variable == -1)
