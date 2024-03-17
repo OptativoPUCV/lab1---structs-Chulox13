@@ -28,7 +28,16 @@ invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) 
 {
-  
+  int* arreglo_invertido = (int*)malloc(size * sizeof(int));
+  for (int i = 0; i < size; i++) 
+  {
+      arreglo_invertido[i] = arr[size - i - 1];
+  }
+
+  for (int k = 0; k < size; k++)
+    {
+      arr[k] = arreglo_invertido[k];
+    }
 }
 
 /*
