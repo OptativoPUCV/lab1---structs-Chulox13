@@ -559,3 +559,14 @@ exercises.c:64:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 1c98c6f
+Sun 17 Mar 2024 12:13:44 AM UTC: 
+ exercises.c | 22 +++++-----------------
+ 1 file changed, 5 insertions(+), 17 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:52:10: error: function returns address of local variable [-Werror=return-local-addr]
+   52 |   return newArr;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8fe9e4c
