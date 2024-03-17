@@ -460,3 +460,30 @@ exercises.c:67:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 b651c92
+Sun 17 Mar 2024 12:01:28 AM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:34:19: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                   ^
+exercises.c:34:21: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                     ^
+exercises.c:34:24: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                        ^
+exercises.c:34:26: error: stray ‘\302’ in program
+   34 |       arr[size - i - 1] = temp;
+      |                          ^
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:50:5: error: expected expression before ‘}’ token
+   50 |     }
+      |     ^
+exercises.c:65:10: error: function returns address of local variable [-Werror=return-local-addr]
+   65 |   return newArr;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bbf45fc
