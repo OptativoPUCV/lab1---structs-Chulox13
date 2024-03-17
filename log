@@ -746,3 +746,15 @@ exercises.c:86:23: error: ‘size3’ undeclared (first use in this function); d
 exercises.c:86:23: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 3bcdf59
+Sun 17 Mar 2024 01:03:30 AM UTC: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:85:3: error: ‘size3’ undeclared (first use in this function); did you mean ‘size2’?
+   85 |   size3 = size1+size2;
+      |   ^~~~~
+      |   size2
+exercises.c:85:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+aef62ea
