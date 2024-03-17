@@ -145,7 +145,7 @@ int checkSorted(int arr[], int size)
         
       else
       {
-        break;
+        variable = 0;
       }
     }
   if (variable == -1)
