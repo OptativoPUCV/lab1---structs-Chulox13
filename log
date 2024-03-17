@@ -716,3 +716,21 @@ exercises.c:84:8: error: unused variable ‘arreglo_fusionado’ [-Werror=unused
 cc1: all warnings being treated as errors
 Compilation failed
 66e5e1d
+Sun 17 Mar 2024 12:59:08 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:84:8: error: ‘result’ redeclared as different kind of symbol
+   84 |   int* result = (int*)malloc((size1 + size2) * sizeof(int));
+      |        ^~~~~~
+exercises.c:82:28: note: previous definition of ‘result’ with type ‘int *’
+   82 |                        int result[])
+      |                        ~~~~^~~~~~~~
+exercises.c:86:23: error: ‘size3’ undeclared (first use in this function); did you mean ‘size2’?
+   86 |   for (int i = 0; i < size3; i++)
+      |                       ^~~~~
+      |                       size2
+exercises.c:86:23: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a935158
