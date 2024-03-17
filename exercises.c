@@ -82,18 +82,35 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) 
 {
   result = (int*)malloc((size1 + size2) * sizeof(int));
-  int size3 = size1+size2;
-  int j = 0, k = 0;
-  for (int i = 0; i < size3; i++)
+  int indice1 = 0;
+  int indice2 = 0;
+  int indice_fusionado = 0;
+
+  // Fusionar los arreglos ordenados
+  while (indice1 < size1 && indice2 < size2) {
+      if (arr1[indice1] <= arr2[indice2]) {
+          result[indice_fusionado] = arr1[indice1];
+          indice1++;
+      } else {
+          result[indice_fusionado] = arr2[indice2];
+          indice2++;
+      }
+      indice_fusionado++;
+  }
+
+  // Agregar los elementos restantes del arreglo1, si los hay
+  while (indice1 < size1) {
+      result[indice_fusionado] = arr1[indice1];
+      indice1++;
+      indice_fusionado++;
+  }
+
+  // Agregar los elementos restantes del arreglo2, si los hay
+  while (indice2 < size2)
     {
-      if (j < size1 && (k >= size2 || arr1[j] <= arr2[k]))
-      {
-        result[i] = arr1[j];
-      }
-      else
-      {
-        result[i] = arr2[k];
-      }
+      result[indice_fusionado] = arr2[indice2];
+      indice2++;
+      indice_fusionado++;
     }
   
   
