@@ -122,38 +122,32 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) 
 { 
-  int variable = 1;
-  for (int i = 0; i < size; i++)
+  int ascendente = 1;
+  int descendente = 1;
+  for (int i = 0; i < size - 1; i++)
     {
-      if (arr[i] <= arr[i+1])
+      if (arr[i] > arr[i + 1])
       {
+        ascendente = 0;
         
       }
-      else variable = -1;;
-    }
-  if (variable == 1) 
-  {
-    return variable;
-  }
-
-  for (int k = 0; k < size; k++)
-    {
-      if (arr[k] >= arr[k+1])
+      if (arr[i] < arr[i + 1])
       {
-        
-      }
-        
-      else
-      {
-        variable = 0;
+        descendente = 0;
       }
     }
-  if (variable == -1)
+  if (ascendente == 1)
   {
-    return variable;
+    return 1;
   }
-  variable = 0;
-  return variable;
+  else
+  {
+    if (descendente == 1)
+    {
+      return -1;
+    }
+  }
+  return 0;
 }
 
 /*
