@@ -122,7 +122,7 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) 
 { 
-  int variable = 1;
+  int variable;
   for (int i = 0; i < size-1; i++)
     {
       variable = 1;
@@ -132,6 +132,7 @@ int checkSorted(int arr[], int size)
         break;
       }
     }
+  if (variable == 1) return variable;
     
   for (int k = 0; k < size-1; k++)
     {
