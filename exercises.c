@@ -135,7 +135,7 @@ int checkSorted(int arr[], int size)
   {
     return variable;
   }
-    
+  variable = -1;
   for (int k = 0; k < size-1; k++)
     {
       if (!(arr[k] > arr[k+1]))
