@@ -127,7 +127,6 @@ int checkSorted(int arr[], int size)
     {
       if (!(arr[i] < arr[i+1]))
       {
-        variable = -1;
         break;
       }
     }
@@ -140,7 +139,6 @@ int checkSorted(int arr[], int size)
     {
       if (!(arr[k] > arr[k+1]))
       {
-        variable = 0;
         break;
       }
     }
