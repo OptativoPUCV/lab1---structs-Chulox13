@@ -47,7 +47,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         cont++;
       }
     }
-  cont = cont+1;
+  
   int *newArr = malloc(cont * sizeof(int)); // Allocate memory on the heap
   *newSize = cont;
   int x = 0;
