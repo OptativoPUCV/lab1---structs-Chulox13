@@ -81,56 +81,33 @@ arreglos en un tercer arreglo también ordenado.
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) 
 {
-  int resultIndex = 0;
-
-  // Fusionamos los dos arreglos ordenados
-  int i = 0, j = 0;
-  while (i < size1 && j < size2) {
-      if (arr1[i] <= arr2[j]) {
-          result[resultIndex] = arr1[i];
-          i++;
-      } else {
-          result[resultIndex] = arr2[j];
-          j++;
+  int i = 0, j = 0, k = 0;
+  while (i < size1 && j < size2)
+    {
+      if (arr1[i] < arr2[j])
+      {
+        result[k] = arr1[i];
+        i++;
+        
       }
-      resultIndex++;
-
-      // Realloc para ajustar el tamaño del arreglo result
-      result = (int*)realloc(result, resultIndex * sizeof(int));
-      if (result == NULL) {
-          printf("Error: No se pudo asignar memoria.\n");
-          exit(1);
+      else
+      {
+        result[k] = arr2[j];
+        j++;
       }
-  }
-
-  // Agregar los elementos restantes de arr1, si los hay
-  while (i < size1) {
-      result[resultIndex] = arr1[i];
+    }
+  while (i < size1)
+    {
+      result[k] = arr1[i];
       i++;
-      resultIndex++;
-
-      // Realloc para ajustar el tamaño del arreglo result
-      result = (int*)realloc(result, resultIndex * sizeof(int));
-      if (result == NULL) {
-          printf("Error: No se pudo asignar memoria.\n");
-          exit(1);
-      }
-  }
-
-  // Agregar los elementos restantes de arr2, si los hay
-  while (j < size2) {
-      result[resultIndex] = arr2[j];
+      
+    }
+  while (j < size2)
+    {
+      result[k] = arr2[j];
       j++;
-      resultIndex++;
-
-      // Realloc para ajustar el tamaño del arreglo result
-      result = (int*)realloc(result, resultIndex * sizeof(int));
-      if (result == NULL) {
-          printf("Error: No se pudo asignar memoria.\n");
-          exit(1);
-      }
-  }
-                       
+    }
+  
 }
 
 /*
