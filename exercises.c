@@ -125,9 +125,13 @@ int checkSorted(int arr[], int size)
   int variable = 1;
   for (int i = 0; i < size; i++)
     {
-      if (!(arr[i] <= arr[i+1]))
+      if (arr[i] <= arr[i+1])
       {
-        variable = 0;
+        
+      }
+      else
+      {
+        variable = -1;
         break;
       }
     }
@@ -135,13 +139,16 @@ int checkSorted(int arr[], int size)
   {
     return variable;
   }
-  variable = -1;
   for (int k = 0; k < size; k++)
     {
-      if (!(arr[k] >= arr[k+1]))
+      if (arr[k] >= arr[k+1])
+      {
+        
+      }
+        
+      else
       {
         variable = 0;
-        break;
       }
     }
   if (variable == -1)
