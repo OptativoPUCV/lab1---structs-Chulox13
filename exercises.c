@@ -81,21 +81,25 @@ arreglos en un tercer arreglo también ordenado.
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) 
 {
-  result = (int*)malloc((size1 + size2) * sizeof(int));
-  int indice1 = 0;
-  int indice2 = 0;
-  int indice_fusionado = 0;
+  int totalSize = size1 + size2;
+  result = (int*)malloc(totalSize * sizeof(int));
+  if (result == NULL) {
+      printf("Error: No se pudo asignar memoria.\n");
+      exit(1);
+  }
 
-  // Fusionar los arreglos ordenados
-  while (indice1 < size1 && indice2 < size2) {
-      if (arr1[indice1] <= arr2[indice2]) {
-          result[indice_fusionado] = arr1[indice1];
-          indice1++;
+  int i = 0, j = 0, k = 0;
+
+  // Fusionamos los arreglos ordenados
+  while (i < size1 && j < size2) {
+      if (arr1[i] <= arr2[j]) {
+          result[k] = arr1[i];
+          i++;
       } else {
-          result[indice_fusionado] = arr2[indice2];
-          indice2++;
+          result[k] = arr2[j];
+          j++;
       }
-      indice_fusionado++;
+      k++;
   }
 
   
