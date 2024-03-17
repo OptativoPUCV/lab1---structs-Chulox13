@@ -47,7 +47,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         cont++;
       }
     }
-  
+  cont = cont+1;
   int newArr[cont];
   *newSize = cont;
 
@@ -60,7 +60,6 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         x++;
       }
     }
-
 
   return newArr; 
 }
