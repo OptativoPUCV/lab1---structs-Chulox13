@@ -131,7 +131,11 @@ int checkSorted(int arr[], int size)
         break;
       }
     }
-  if (variable == 1) return variable;
+  if (variable == 1) 
+  {
+    return variable;
+  }
+    
     
   for (int k = 0; k < size; k++)
     {
