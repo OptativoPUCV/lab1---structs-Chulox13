@@ -764,3 +764,14 @@ Sun 17 Mar 2024 01:03:41 AM UTC:
  tests:  0|4
 total_score: 30/70
 7ff72f0
+Sun 17 Mar 2024 01:03:55 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:84:11: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   84 |   *result = (int*)malloc((size1 + size2) * sizeof(int));
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+4d3892f
