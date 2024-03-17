@@ -144,7 +144,11 @@ int checkSorted(int arr[], int size)
         break;
       }
     }
-  
+  if (variable == -1)
+  {
+    return variable;
+  }
+  variable = 0;
   return variable;
 }
 
