@@ -693,3 +693,26 @@ exercises.c:85:9: error: statement with no effect [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 761e131
+Sun 17 Mar 2024 12:58:43 AM UTC: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:84:42: error: ‘tamano1’ undeclared (first use in this function)
+   84 |   int* arreglo_fusionado = (int*)malloc((tamano1 + tamano2) * sizeof(int));
+      |                                          ^~~~~~~
+exercises.c:84:42: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:84:52: error: ‘tamano2’ undeclared (first use in this function); did you mean ‘atan2’?
+   84 |   int* arreglo_fusionado = (int*)malloc((tamano1 + tamano2) * sizeof(int));
+      |                                                    ^~~~~~~
+      |                                                    atan2
+exercises.c:86:23: error: ‘size3’ undeclared (first use in this function); did you mean ‘size2’?
+   86 |   for (int i = 0; i < size3; i++)
+      |                       ^~~~~
+      |                       size2
+exercises.c:84:8: error: unused variable ‘arreglo_fusionado’ [-Werror=unused-variable]
+   84 |   int* arreglo_fusionado = (int*)malloc((tamano1 + tamano2) * sizeof(int));
+      |        ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+66e5e1d

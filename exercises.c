@@ -81,8 +81,7 @@ arreglos en un tercer arreglo también ordenado.
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) 
 {
-  int size3 = size1+size2;
-  result[size3];
+  int* arreglo_fusionado = (int*)malloc((tamano1 + tamano2) * sizeof(int));
   int j = 0, k = 0;
   for (int i = 0; i < size3; i++)
     {
