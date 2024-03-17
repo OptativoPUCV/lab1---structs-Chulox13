@@ -123,7 +123,7 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) 
 { 
   int variable = 1;
-  for (int i = 0; i < size-1; i++)
+  for (int i = 0; i < size; i++)
     {
       if (!(arr[i] < arr[i+1]))
       {
@@ -136,7 +136,7 @@ int checkSorted(int arr[], int size)
     return variable;
   }
   variable = -1;
-  for (int k = 0; k < size-1; k++)
+  for (int k = 0; k < size; k++)
     {
       if (!(arr[k] > arr[k+1]))
       {
